@@ -1,0 +1,18 @@
+<label *ngIf="label.length" class="form-label">{{ label }}
+    <span *ngIf="required" class="text-danger">*</span>
+</label>
+<div *ngFor="let option of options" class="form-check mb-1 mt-1">
+    <input
+        [formControl]="control"
+        [id]="option.value"
+        [value]="option.value"
+        class="form-check-input"
+        type="radio"
+    />
+    <label [for]="option.value" class="form-check-label">{{ option.label }}</label>
+</div>
+
+<div *ngIf="submitted && control.invalid" class="invalid-feedback">
+    <span *ngIf="control.errors?.['required']">{{ requiredMessage }}</span>
+</div>
+

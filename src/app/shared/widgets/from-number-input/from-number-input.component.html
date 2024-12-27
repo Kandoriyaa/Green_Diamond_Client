@@ -1,0 +1,16 @@
+<label class="form-label"> {{ label }}
+    @if (required) {
+        <span class="text-danger">*</span>
+    }
+</label>
+<input (keypress)="numberOnly($event)"
+       [formControl]="control"
+       [ngClass]="{'is-invalid': submitted && control.invalid}"
+       [placeholder]="placeholder"
+       class="form-control"
+       [readonly]="readonly" />
+<div *ngIf="submitted && control.invalid" class="invalid-feedback">
+    <span *ngIf="control.errors?.['required']">{{ requiredMessage }}</span>
+    <span *ngIf="control.errors?.['maxlength']">{{ maxLengthMessage }}</span>
+    <span *ngIf="control.errors?.['pattern']">{{ patternMessage }}</span> 
+</div>

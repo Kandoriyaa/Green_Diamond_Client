@@ -1,0 +1,13 @@
+<div *ngIf="loadingBarService.isLoading | async">
+    <div class="progress-cnt">
+        <div class="logoBox"><img alt="GREEN DIAMOND" src="assets/images/logo-dark.svg" title="GREEN DIAMOND"/>
+        </div>
+        <div class="progress">
+            <div class="progress-bar-value"></div>
+        </div>
+        <div class="loading">
+            Loading...
+        </div>
+    </div>
+    <div class="progress-box"></div>
+</div>

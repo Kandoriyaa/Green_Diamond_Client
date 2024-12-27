@@ -1,0 +1,7 @@
+<div class="page-size">
+    <select (change)="onPageSizeChange($event)" [disabled]="isDisabled === true" class="form-select"
+            id="pageSizeSelect">
+        <option *ngFor="let size of pageSizes" [value]="size">{{ size }}</option>
+    </select>
+    <label for="pageSizeSelect">Record per page</label>
+</div>

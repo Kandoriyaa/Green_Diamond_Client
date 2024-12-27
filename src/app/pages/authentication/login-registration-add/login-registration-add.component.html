@@ -1,0 +1,38 @@
+<div class="modal-header">
+    <button (click)="activeModal.dismiss('Cross click')" aria-label="Close" class="btn-close" type="button"></button>
+</div>
+
+<div class="form-modal">
+
+    <div class="form-toggle">
+        <button id="login-toggle" onclick="toggleLogin()">log in</button>
+        <button id="signup-toggle" onclick="toggleSignup()">sign up</button>
+    </div>
+
+    <div id="login-form">
+        <form (ngSubmit)="customerLogin()" [formGroup]="customerloginForm" class="form">
+            <input type="text" inputType="text" placeholder="Enter email or username" (input)="onSearch($event)" />
+            <input type="password" formControlName="custPassword" inputType="text" placeholder="Enter password" />
+            <button type="submit" class="btn login">login</button>
+            <p><a href="javascript:void(0)">Forgotten account</a></p>
+            <hr />
+
+        </form>
+    </div>
+
+    <div id="signup-form">
+        <form>
+            <input type="email" placeholder="Enter your First Name" />
+            <input type="email" placeholder="Enter your Last Name" />
+            <input type="email" placeholder="Enter your Phone Number" />
+            <input type="email" placeholder="Enter your email" />
+            <input type="text" placeholder="Choose username" />
+            <input type="password" placeholder="Create password" />
+            <button type="button" class="btn signup">create account</button>
+            <p>Clicking <strong>create account</strong> means that you are agree to our <a href="javascript:void(0)">terms of services</a>.</p>
+            <hr />
+
+        </form>
+    </div>
+
+</div>

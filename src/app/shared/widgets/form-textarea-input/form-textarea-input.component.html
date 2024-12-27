@@ -1,0 +1,13 @@
+<label class="form-label"> {{ label }}
+    @if (required) {
+        <span class="text-danger">*</span>
+    }
+</label>
+<textarea [formControl]="control"
+          [ngClass]="{'is-invalid': submitted && control.invalid}"
+          [placeholder]="placeholder"
+          class="form-control" type="text"></textarea>
+<div *ngIf="submitted && control.invalid" class="invalid-feedback">
+    <span *ngIf="control.errors?.['required']">{{ requiredMessage }}</span>
+    <span *ngIf="control.errors?.['maxlength']">{{ maxLengthMessage }}</span>
+</div>

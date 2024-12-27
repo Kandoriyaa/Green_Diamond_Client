@@ -1,0 +1,71 @@
+<div class="inner-content">
+    <div class="row">
+        <div class="col-12">
+            <div class="page-title d-flex justify-content-between align-items-center mb-4">
+                <h1>All Category</h1>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+
+            
+            <div
+                class="product-grid row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-3 row-cols-xl-4 row-cols-xxl-5">
+                <div *ngFor="let data of clotheDisplayList.clothedisplayDtoinfo">
+                    <div class="col">
+                        <div class="product-item">
+                            <figure>
+                                <a href=" " title="data.clotheName">
+                                    <img src="{{data.photo}}" alt="Product Thumbnail" class="tab-image">
+                                </a>
+                            </figure>
+                            <div class="d-flex flex-column text-center">
+                                <h3 class="fs-6 fw-normal">{{data.clotheName}}</h3>
+                                <div>
+                                    <span class="rating">
+                                        <svg width="18" height="18" class="text-warning">
+                                        </svg>
+                                        <svg width="18" height="18" class="text-warning">
+                                        </svg>
+                                        <svg width="18" height="18" class="text-warning">
+                                        </svg>
+                                        <svg width="18" height="18" class="text-warning">
+                                        </svg>
+                                        <svg width="18" height="18" class="text-warning">
+                                        </svg>
+                                    </span>
+                                    <span>(222)</span>
+                                </div>
+                                <div class="d-flex justify-content-center align-items-center gap-2">
+                                    <del>{{data.price}}</del>
+                                    <span class="text-dark fw-semibold">{{data.price}}</span>
+                                    <span
+                                        class="badge border border-dark-subtle rounded-0 fw-normal px-1 fs-7 lh-1 text-body-tertiary">{{data.discount}}</span>
+                                </div>
+                                <div class="button-area p-3 pt-0">
+                                    <div class="row g-1 mt-3">
+                                        <div class="col-3"><input type="number" name="quantity"
+                                                class="form-control border-dark-subtle input-number quantity" value="1">
+                                        </div>
+                                        <div class="col-7"><a href="#"
+                                                class="btn btn-primary rounded-1 p-2 fs-7 btn-cart"><svg width="18"
+                                                    height="18">
+                                                    <use xlink:href="#cart"></use>
+                                                </svg> Add to Cart</a></div>
+                                        <div class="col-2"><a href="#" class="btn btn-outline-dark rounded-1 p-2 fs-6">
+                                                <svg width="18" height="18">
+                                                    <use xlink:href="#heart"></use>
+                                                </svg>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,21 @@
+<label class="form-label"> {{ label }}
+  @if (required) {
+    <span class="text-danger">*</span>
+  }
+</label>
+<div class="input-group">
+  <input #d="ngbDatepicker"
+         (ngModelChange)="onDateChange($event)"
+         [maxDate]="maxDate"
+         [minDate]="minDate"
+         [ngClass]="{'is-invalid': submitted && control.invalid}"
+         [ngModel]="model"
+         class="form-control"
+         name="dp"
+         ngbDatepicker
+         placeholder="yyyy-mm-dd">
+  <button (click)="d.toggle()" class="btn btn-outline-secondary bi bi-calendar3" type="button"></button>
+  <div *ngIf="submitted && control.invalid" class="invalid-feedback">
+    <span *ngIf="control.errors?.['required']">{{ requiredMessage }}</span>
+  </div>
+</div>

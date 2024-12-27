@@ -1,0 +1,18 @@
+<label class="form-label"> {{ label }}
+    @if (required) {
+        <span class="text-danger">*</span>
+    }
+</label>
+<ng-select (change)="onSelectChange($event)"
+           [(ngModel)]="value"
+           [formControl]="control"
+           [items]="options"
+           [ngClass]="{'is-invalid': submitted && control.invalid}"
+           [placeholder]="placeholder"
+           bindLabel="name"
+           bindValue="value"
+           class="form-control">
+</ng-select>
+<div *ngIf="submitted && control.invalid" class="invalid-feedback">
+    <span *ngIf="control.errors?.['required']">{{ requiredMessage }}</span>
+</div>

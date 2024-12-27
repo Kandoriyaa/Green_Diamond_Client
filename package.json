@@ -1,0 +1,24 @@
+{
+  "dependencies": {
+    "@angular-devkit/build-angular": "^18.2.6",
+    "@angular/cli": "^18.2.6",
+    "@angular/common": "^18.2.6",
+    "@angular/core": "^18.2.6",
+    "@angular/forms": "^18.2.6",
+    "@angular/localize": "^18.2.6",
+    "@angular/platform-browser": "^18.2.6",
+    "@angular/platform-server": "^18.2.6",
+    "@angular/router": "^18.2.6",
+    "@angular/ssr": "^18.2.6",
+    "@ng-bootstrap/ng-bootstrap": "^17.0.1",
+    "@ng-select/ng-select": "^13.8.1",
+    "ngx-pagination": "^6.0.3",
+    "ngx-toastr": "^19.0.0",
+    "sweetalert2": "^11.14.4",
+    "swiper": "^11.1.14"
+  },
+  "devDependencies": {
+    "@types/jasmine": "^5.1.4",
+    "@types/jest": "^29.5.13"
+  }
+}
